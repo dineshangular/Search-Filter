@@ -1,0 +1,9 @@
+<div class="searchFilter">
+  <label>Search Name </label>
+  <input type="text" placeholder="name" [(ngModel)]="userFilter.name">
+  <ol>
+    <li *ngFor="let user of users | filterBy: userFilter">
+       {{ user.name }}
+    </li>
+  </ol>
+</div>
